@@ -1,9 +1,4 @@
 ﻿using GoodRead.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodRead.Domain.Entities.Books
 {
@@ -23,9 +18,6 @@ namespace GoodRead.Domain.Entities.Books
 
         public long? AuthorId { get; set; }
         public virtual Author? Author { get; set; }
-
-        public long CategoryId { get; set; }
-        public virtual Category? BookCategory { get; set; }
 
         public virtual ICollection<Genre> Genre { get; set; }
     }

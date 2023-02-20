@@ -2,15 +2,10 @@
 using GoodRead.DataAccess.Interfaces;
 using GoodRead.Domain.Common;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodRead.DataAccess.Repositories
 {
-    public class GenericRepository<T>: IGenericRepository<T> where T : BaseEntity
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         private readonly AppDbContext _dbContext;
         private readonly DbSet<T> _dbSet;
