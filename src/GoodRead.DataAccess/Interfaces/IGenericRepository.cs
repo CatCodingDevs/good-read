@@ -13,6 +13,5 @@ namespace GoodRead.DataAccess.Interfaces
         Task<T> UpdateAsync(long id,T entity);
         Task<T> DeleteAsync(long id);
         Task<T> GetAsync(long id);
-        Task<IEnumerable<T>> GetAllAsync();
     }
 }
