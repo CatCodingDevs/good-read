@@ -1,4 +1,5 @@
 ﻿using GoodRead.Domain.Common;
+using GoodRead.Domain.Entities.Addresses;
 using GoodRead.Domain.Enums;
 
 namespace GoodRead.Domain.Entities.Users
@@ -13,5 +14,7 @@ namespace GoodRead.Domain.Entities.Users
         public string Salt { get; set; } = String.Empty;
 
         public UserRole Role { get; set; } = UserRole.User;
+
+        public ICollection<Address> Address { get; set; }
     }
 }
