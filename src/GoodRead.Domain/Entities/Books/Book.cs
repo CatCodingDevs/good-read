@@ -19,6 +19,6 @@ namespace GoodRead.Domain.Entities.Books
         public long? AuthorId { get; set; }
         public virtual Author? Author { get; set; }
 
-        public virtual ICollection<Genre> Genre { get; set; }
+        public virtual ICollection<Genre> Genre { get; set; } = null!;
     }
 }

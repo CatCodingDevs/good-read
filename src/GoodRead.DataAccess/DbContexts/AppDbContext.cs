@@ -16,7 +16,6 @@ namespace GoodRead.DataAccess.DbContexts
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
@@ -24,7 +23,6 @@ namespace GoodRead.DataAccess.DbContexts
         {
             modelBuilder.Entity<User>().HasIndex(x => x.Email).IsUnique(true);
             modelBuilder.Entity<Genre>().HasIndex(x => x.Name).IsUnique(true);
-            modelBuilder.Entity<Category>().HasIndex(x => x.CategoryName).IsUnique(true);
             modelBuilder.Entity<Publisher>().HasIndex(x => x.Name).IsUnique(true);
         }
     }

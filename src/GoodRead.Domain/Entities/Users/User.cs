@@ -15,6 +15,6 @@ namespace GoodRead.Domain.Entities.Users
 
         public UserRole Role { get; set; } = UserRole.User;
 
-        public ICollection<Address> Address { get; set; }
+        public ICollection<Address> Address { get; set; } = null!;
     }
 }
