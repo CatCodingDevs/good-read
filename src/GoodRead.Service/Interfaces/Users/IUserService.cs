@@ -1,5 +1,6 @@
 ﻿using GoodRead.Service.DTOs.Accounts;
 using GoodRead.Service.DTOs.Users;
+using GoodRead.Service.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,10 @@ namespace GoodRead.Service.Interfaces.Users
     {
         Task<bool> UpdateAsync(long id, UserUpdateDto viewModel);
         Task<bool> DeleteAsync(long id);
-        Task<UserViewModel> GetIdAsync(long id);
-        Task<UserViewModel> GetUsernameAsync(string username);
+        Task<UserUpdateDto> GetIdAsync(long id);
+        Task<UserUpdateDto> GetUsernameAsync(string username);
         Task<bool> ImageUpdateAsync(long id, ImageUploadDto dto);
-        Task<IEnumerable<UserViewModel>> GetAllAsync(PaginationParams @params);
+        Task<IEnumerable<UserUpdateDto>> GetAllAsync(PaginationParams @params);
         Task<bool> RoleControlAsync(long userId, ushort roleNum);
     }
 }

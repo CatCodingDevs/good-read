@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoodRead.Service.DTOs.Accounts
 {
-    internal class ImageUploadDto
+    public class ImageUploadDto
     {
     }
 }
