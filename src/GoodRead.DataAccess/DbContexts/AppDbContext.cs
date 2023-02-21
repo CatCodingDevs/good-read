@@ -1,4 +1,5 @@
-﻿using GoodRead.Domain.Entities.Books;
+﻿using GoodRead.Domain.Entities.Addresses;
+using GoodRead.Domain.Entities.Books;
 using GoodRead.Domain.Entities.Orders;
 using GoodRead.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace GoodRead.DataAccess.DbContexts
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<Address> Addresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
