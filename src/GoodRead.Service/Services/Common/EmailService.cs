@@ -1,10 +1,13 @@
 ﻿using GoodRead.Service.DTOs.Common;
 using GoodRead.Service.Interfaces.Common;
+using MailKit.Net.Smtp;
+using MailKit.Security;
 using Microsoft.Extensions.Configuration;
+using MimeKit;
+using MimeKit.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
