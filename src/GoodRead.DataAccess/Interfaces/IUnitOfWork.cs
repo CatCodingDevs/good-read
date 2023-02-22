@@ -9,5 +9,6 @@
         IPublisherRepository PublisherRepository { get; }
         IOrderRepository OrderRepository { get; }
         IOrderDetailRepository OrderDetailRepository { get; }
+        IAddressRepository AddressRepository { get; }
     }
 }

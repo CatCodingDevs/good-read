@@ -18,7 +18,7 @@ namespace GoodRead.DataAccess.Repositories
         public IOrderRepository OrderRepository { get; }
 
         public IOrderDetailRepository OrderDetailRepository { get; }
-
+        public IAddressRepository AddressRepository { get; }
         public UnitOfWork(AppDbContext dbContext)
         {
             UserRepository = new UserRepository(dbContext);
@@ -28,6 +28,7 @@ namespace GoodRead.DataAccess.Repositories
             PublisherRepository = new PublisherRepository(dbContext);
             OrderRepository = new OrderRepository(dbContext);
             OrderDetailRepository = new OrderDetailRepository(dbContext);
+            AddressRepository = new AddressRepository(dbContext);
         }
     }
 }
