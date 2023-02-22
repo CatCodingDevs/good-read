@@ -1,4 +1,5 @@
 ﻿using GoodRead.Domain.Entities.Users;
+using GoodRead.Service.Attributes;
 using NpgsqlTypes;
 using System;
 using System.Collections.Generic;

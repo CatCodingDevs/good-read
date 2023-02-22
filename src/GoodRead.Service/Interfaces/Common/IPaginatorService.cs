@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GoodRead.Service.Interfaces.Common
 {
-    internal interface IPaginatorService
+    public interface IPaginatorService
     {
+        void ToPagenator(PaginationMetaData metaData);
     }
 }
