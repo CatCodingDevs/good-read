@@ -1,9 +1,6 @@
 ﻿using GoodRead.Domain.Entities.Users;
 using GoodRead.Service.Attributes;
 using Microsoft.AspNetCore.Mvc;
-using NpgsqlTypes;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
