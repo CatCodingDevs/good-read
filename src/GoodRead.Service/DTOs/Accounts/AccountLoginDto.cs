@@ -1,13 +1,8 @@
 ﻿using GoodRead.Domain.Entities.Users;
 using GoodRead.Service.Attributes;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace GoodRead.Service.DTOs.Accounts
 {
@@ -25,8 +20,8 @@ namespace GoodRead.Service.DTOs.Accounts
 
         public static implicit operator User(AccountLoginDto accountLoginDto)
         => new User()
-           {
-               Email = accountLoginDto.Email,
-           };
+        {
+            Email = accountLoginDto.Email,
+        };
     }
 }

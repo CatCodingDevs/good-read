@@ -1,12 +1,6 @@
 ﻿using GoodRead.Service.DTOs.Accounts;
 using GoodRead.Service.DTOs.Common;
 using GoodRead.Service.DTOs.Users;
-using GoodRead.Service.ViewModels.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodRead.Service.Interfaces.Users
 {

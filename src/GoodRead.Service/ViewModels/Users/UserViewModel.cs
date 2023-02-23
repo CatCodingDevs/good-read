@@ -1,17 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace GoodRead.Service.ViewModels.Users
 {
     public class UserViewModel
     {
         [JsonPropertyName("id")]
-        [FromForm(Name = "id")] 
+        [FromForm(Name = "id")]
         public long Id { get; set; }
 
         [JsonPropertyName("firstname")]
