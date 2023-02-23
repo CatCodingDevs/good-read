@@ -9,6 +9,6 @@ namespace GoodRead.Domain.Entities.Orders
         public User User { get; set; } = null!;
         public decimal TotalSum { get; set; }
 
-        ICollection<OrderDetail> OrderDetails { get; set; } = null!;
+        public ICollection<OrderDetail> OrderDetails { get; set; } = null!;
     }
 }
