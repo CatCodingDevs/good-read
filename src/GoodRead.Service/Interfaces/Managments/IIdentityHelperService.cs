@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoodRead.Service.Interfaces.Common
+namespace GoodRead.Service.Interfaces.Managments
 {
     public interface IIdentityHelperService
     {
