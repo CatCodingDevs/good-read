@@ -9,4 +9,10 @@ public class AccountsController : Controller
     {
         return View("Login");
     }
+
+    [HttpGet("register")]
+    public IActionResult Register()
+    {
+        return View("Register");
+    }
 }

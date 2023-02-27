@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoodRead.Service\GoodRead.Service.csproj" />
+    <ProjectReference Include="..\GoodRead.Service\GoodRead.Service.csproj"/>
   </ItemGroup>
 
 </Project>
