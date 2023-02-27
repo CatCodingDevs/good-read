@@ -1,5 +1,1864 @@
-﻿<button type="button">Click me!</button>
+﻿<div class="row custom-gutter mb-40">
+                                            <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
 
-<input type="submit" value="Submit">
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 32665);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
 
-<a href="https://www.example.com" class="btn btn-primary">Go to Example.com</a>
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,32665);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/zhyul-vern-kapitan-grant-bolalari" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//62f5f91276919.jpg.webp" loading="lazy" alt="Jyul Vern: Kapitan Grant bolalari" src="https://assets.asaxiy.uz/product/main_image/desktop//62f5f91276919.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Jyul Vern: Kapitan Grant bolalari                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>23 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">50 000 so'm</span>
+                                                            <div class="installment__price">5 500 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(32665); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/zhyul-vern-kapitan-grant-bolalari" onclick="show_one_click(32665);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_32665\",\"item_name\":\"Jyul Vern: Kapitan Grant bolalari\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_32665\",\"item_name\":\"Jyul Vern: Kapitan Grant bolalari\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_32665\",\"item_name\":\"Jyul Vern: Kapitan Grant bolalari\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_32665\",\"item_name\":\"Jyul Vern: Kapitan Grant bolalari\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_32665\",\"item_name\":\"Jyul Vern: Kapitan Grant bolalari\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 31424);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,31424);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/zhavlon-zhovliev-kurkma-yumshok-mukova" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//6269722c74ae7.jpg.webp" loading="lazy" alt="Javlon Jovliyev: Qo‘rqma (yumshoq muqova)" src="https://assets.asaxiy.uz/product/main_image/desktop//6269722c74ae7.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Javlon Jovliyev: Qo‘rqma (yumshoq muqova)                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>6 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">45 000 so'm</span>
+                                                            <div class="installment__price">4 900 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(31424); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/zhavlon-zhovliev-kurkma-yumshok-mukova" onclick="show_one_click(31424);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_31424\",\"item_name\":\"Javlon Jovliyev: Qo\\u2018rqma (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_31424\",\"item_name\":\"Javlon Jovliyev: Qo\\u2018rqma (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_31424\",\"item_name\":\"Javlon Jovliyev: Qo\\u2018rqma (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_31424\",\"item_name\":\"Javlon Jovliyev: Qo\\u2018rqma (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_31424\",\"item_name\":\"Javlon Jovliyev: Qo\\u2018rqma (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 28750);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,28750);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/zherom-selinzher-zhavdarzordagi-haloskor-yumshok-mukova" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//6269705b3b2fe.jpg.webp" loading="lazy" alt="Jerom Selinjer: Javdarzordagi xaloskor (yumshoq muqova)" src="https://assets.asaxiy.uz/product/main_image/desktop//6269705b3b2fe.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Jerom Selinjer: Javdarzordagi xaloskor (yumshoq muqova)                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>2 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">39 000 so'm</span>
+                                                            <div class="installment__price">4 300 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(28750); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/zherom-selinzher-zhavdarzordagi-haloskor-yumshok-mukova" onclick="show_one_click(28750);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28750\",\"item_name\":\"Jerom Selinjer: Javdarzordagi xaloskor (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28750\",\"item_name\":\"Jerom Selinjer: Javdarzordagi xaloskor (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28750\",\"item_name\":\"Jerom Selinjer: Javdarzordagi xaloskor (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28750\",\"item_name\":\"Jerom Selinjer: Javdarzordagi xaloskor (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28750\",\"item_name\":\"Jerom Selinjer: Javdarzordagi xaloskor (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 15565);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,15565);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/stiven-r-kovi-muvaffaqiyatli-insonlarning-7-kunikmasi-attiq-muqova" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//626961cbe4cb1.jpg.webp" loading="lazy" alt="Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko‘nikmasi" src="https://assets.asaxiy.uz/product/main_image/desktop//626961cbe4cb1.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko‘nikmasi                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>74 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">59 000 so'm</span>
+                                                            <div class="installment__price">6 400 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(15565); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/stiven-r-kovi-muvaffaqiyatli-insonlarning-7-kunikmasi-attiq-muqova" onclick="show_one_click(15565);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_15565\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_15565\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_15565\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_15565\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_15565\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+                    <span class="pr_flash pr_discount">Chegirma</span>
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 28290);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,28290);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/allan-dib-bir-varakli-marketing-rezha" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//6269610d55a08.jpg.webp" loading="lazy" alt="Allan Dib: Bir varaqli marketing reja" src="https://assets.asaxiy.uz/product/main_image/desktop//6269610d55a08.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Allan Dib: Bir varaqli marketing reja                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>30 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                    <span class="product__item-old--price">89 000 so'm</span>
+                                                        <span class="product__item-price">70 000 so'm</span>
+                                                            <div class="installment__price">7 600 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(28290); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/allan-dib-bir-varakli-marketing-rezha" onclick="show_one_click(28290);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28290\",\"item_name\":\"Allan Dib: Bir varaqli marketing reja\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":19000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":89000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28290\",\"item_name\":\"Allan Dib: Bir varaqli marketing reja\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":19000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":89000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28290\",\"item_name\":\"Allan Dib: Bir varaqli marketing reja\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":19000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":89000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28290\",\"item_name\":\"Allan Dib: Bir varaqli marketing reja\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":19000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":89000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28290\",\"item_name\":\"Allan Dib: Bir varaqli marketing reja\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":19000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":89000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 38142);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,38142);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/stiven-r-kovi-muvaffakiyatli-insonlarning-7-kunikmasi-yumshok-mukova" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//63a6aa2513872.jpg.webp" loading="lazy" alt="Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko‘nikmasi (yumshoq muqova)" src="https://assets.asaxiy.uz/product/main_image/desktop//63a6aa2513872.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko‘nikmasi (yumshoq muqova)                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>4 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">49 000 so'm</span>
+                                                            <div class="installment__price">5 400 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(38142); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/stiven-r-kovi-muvaffakiyatli-insonlarning-7-kunikmasi-yumshok-mukova" onclick="show_one_click(38142);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_38142\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_38142\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_38142\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_38142\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_38142\",\"item_name\":\"Stiven R. Kovi: Muvaffaqiyatli insonlarning 7 ko\\u2018nikmasi (yumshoq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 7196);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,7196);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/brajan-trejsi-samaradorlikning-21-juli" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//61f232923c53d.jpg.webp" loading="lazy" alt="Brayan Treysi: Samaradorlikning 21 yo‘li" src="https://assets.asaxiy.uz/product/main_image/desktop//61f232923c53d.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Brayan Treysi: Samaradorlikning 21 yo‘li                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>39 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">29 000 so'm</span>
+                                                            <div class="installment__price">3 200 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(7196); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/brajan-trejsi-samaradorlikning-21-juli" onclick="show_one_click(7196);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_7196\",\"item_name\":\"Brayan Treysi: Samaradorlikning 21 yo\\u2018li\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":9000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":38000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_7196\",\"item_name\":\"Brayan Treysi: Samaradorlikning 21 yo\\u2018li\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":9000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":38000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_7196\",\"item_name\":\"Brayan Treysi: Samaradorlikning 21 yo\\u2018li\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":9000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":38000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_7196\",\"item_name\":\"Brayan Treysi: Samaradorlikning 21 yo\\u2018li\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":9000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":38000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_7196\",\"item_name\":\"Brayan Treysi: Samaradorlikning 21 yo\\u2018li\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":9000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":38000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 37374);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,37374);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/asaxiy-books-kitoblariga-obuna" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//637f238dd1a22.jpg.webp" loading="lazy" alt="Asaxiy Books kitoblariga obuna" src="https://assets.asaxiy.uz/product/main_image/desktop//637f238dd1a22.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Asaxiy Books kitoblariga obuna                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>21 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">979 000 so'm</span>
+                                                            <div class="installment__price">106 100 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(37374); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/asaxiy-books-kitoblariga-obuna" onclick="show_one_click(37374);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_37374\",\"item_name\":\"Asaxiy Books kitoblariga obuna\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":294000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1273000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_37374\",\"item_name\":\"Asaxiy Books kitoblariga obuna\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":294000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1273000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_37374\",\"item_name\":\"Asaxiy Books kitoblariga obuna\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":294000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1273000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_37374\",\"item_name\":\"Asaxiy Books kitoblariga obuna\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":294000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1273000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_37374\",\"item_name\":\"Asaxiy Books kitoblariga obuna\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":294000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1273000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 30596);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,30596);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/svetlana-aleksievich-chernobil-tavallosi-predzakaz" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//62aaf1574a6d5.jpg.webp" loading="lazy" alt="Svetlana Aleksiyevich: Chernobil tavallosi" src="https://assets.asaxiy.uz/product/main_image/desktop//62aaf1574a6d5.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Svetlana Aleksiyevich: Chernobil tavallosi                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>15 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">45 000 so'm</span>
+                                                            <div class="installment__price">4 900 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(30596); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/svetlana-aleksievich-chernobil-tavallosi-predzakaz" onclick="show_one_click(30596);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_30596\",\"item_name\":\"Svetlana Aleksiyevich: Chernobil tavallosi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_30596\",\"item_name\":\"Svetlana Aleksiyevich: Chernobil tavallosi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_30596\",\"item_name\":\"Svetlana Aleksiyevich: Chernobil tavallosi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_30596\",\"item_name\":\"Svetlana Aleksiyevich: Chernobil tavallosi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_30596\",\"item_name\":\"Svetlana Aleksiyevich: Chernobil tavallosi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":14000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":59000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 26262);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,26262);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/zhorzh-oruell-1984" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//626971a1136f2.jpg.webp" loading="lazy" alt="Jorj Oruell: 1984" src="https://assets.asaxiy.uz/product/main_image/desktop//626971a1136f2.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Jorj Oruell: 1984                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>9 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">39 000 so'm</span>
+                                                            <div class="installment__price">4 300 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(26262); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/zhorzh-oruell-1984" onclick="show_one_click(26262);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_26262\",\"item_name\":\"Jorj Oruell: 1984\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_26262\",\"item_name\":\"Jorj Oruell: 1984\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_26262\",\"item_name\":\"Jorj Oruell: 1984\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_26262\",\"item_name\":\"Jorj Oruell: 1984\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_26262\",\"item_name\":\"Jorj Oruell: 1984\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":12000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":51000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+                    <span class="pr_flash pr_discount">Chegirma</span>
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 11668);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,11668);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/toni-shej-baht-etkazish-milliard-dollarlik-internet-dukon-tarihi-buyurtma-asosida" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//622b2768cad9e.jpg.webp" loading="lazy" alt="Toni Shey: Baxt yetkazish. Milliard dollarlik internet do‘kon tarixi" src="https://assets.asaxiy.uz/product/main_image/desktop//622b2768cad9e.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Toni Shey: Baxt yetkazish. Milliard dollarlik internet do‘kon tarixi                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>45 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                    <span class="product__item-old--price">85 000 so'm</span>
+                                                        <span class="product__item-price">75 000 so'm</span>
+                                                            <div class="installment__price">8 200 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(11668); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/toni-shej-baht-etkazish-milliard-dollarlik-internet-dukon-tarihi-buyurtma-asosida" onclick="show_one_click(11668);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_11668\",\"item_name\":\"Toni Shey: Baxt yetkazish. Milliard dollarlik internet do\\u2018kon tarixi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":10000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":85000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_11668\",\"item_name\":\"Toni Shey: Baxt yetkazish. Milliard dollarlik internet do\\u2018kon tarixi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":10000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":85000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_11668\",\"item_name\":\"Toni Shey: Baxt yetkazish. Milliard dollarlik internet do\\u2018kon tarixi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":10000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":85000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_11668\",\"item_name\":\"Toni Shey: Baxt yetkazish. Milliard dollarlik internet do\\u2018kon tarixi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":10000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":85000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_11668\",\"item_name\":\"Toni Shey: Baxt yetkazish. Milliard dollarlik internet do\\u2018kon tarixi\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":10000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":85000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 18597);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,18597);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/jona-berger-yuqumlilik-mahsulot-va-goyalar-qandaj-ommalashadi-oldindan-buyurtma" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//624597b53e5c8.jpg.webp" loading="lazy" alt="Yona Berger: Yuqumlilik. Mahsulot va g‘oyalar qanday ommalashadi (qattiq muqova)" src="https://assets.asaxiy.uz/product/main_image/desktop//624597b53e5c8.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Yona Berger: Yuqumlilik. Mahsulot va g‘oyalar qanday ommalashadi (qattiq muqova)                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>25 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">69 000 so'm</span>
+                                                            <div class="installment__price">7 500 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(18597); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/jona-berger-yuqumlilik-mahsulot-va-goyalar-qandaj-ommalashadi-oldindan-buyurtma" onclick="show_one_click(18597);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_18597\",\"item_name\":\"Yona Berger: Yuqumlilik. Mahsulot va g\\u2018oyalar qanday ommalashadi (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":21000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":90000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_18597\",\"item_name\":\"Yona Berger: Yuqumlilik. Mahsulot va g\\u2018oyalar qanday ommalashadi (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":21000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":90000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_18597\",\"item_name\":\"Yona Berger: Yuqumlilik. Mahsulot va g\\u2018oyalar qanday ommalashadi (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":21000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":90000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_18597\",\"item_name\":\"Yona Berger: Yuqumlilik. Mahsulot va g\\u2018oyalar qanday ommalashadi (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":21000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":90000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_18597\",\"item_name\":\"Yona Berger: Yuqumlilik. Mahsulot va g\\u2018oyalar qanday ommalashadi (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":21000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":90000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 27556);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,27556);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/kel-nyuport-dikkat-chalgituvchi-duneda-muvaffakiyat-sirlari-kattik-mukova" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//611a1dfca4bba.jpg.webp" loading="lazy" alt="Kel Nyuport: Diqqat: Chalg‘ituvchi dunyoda muvaffaqiyat sirlari (qattiq muqova)" src="https://assets.asaxiy.uz/product/main_image/desktop//611a1dfca4bba.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Kel Nyuport: Diqqat: Chalg‘ituvchi dunyoda muvaffaqiyat sirlari (qattiq muqova)                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>16 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">49 000 so'm</span>
+                                                            <div class="installment__price">5 400 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(27556); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/kel-nyuport-dikkat-chalgituvchi-duneda-muvaffakiyat-sirlari-kattik-mukova" onclick="show_one_click(27556);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_27556\",\"item_name\":\"Kel Nyuport: Diqqat: Chalg\\u2018ituvchi dunyoda muvaffaqiyat sirlari (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_27556\",\"item_name\":\"Kel Nyuport: Diqqat: Chalg\\u2018ituvchi dunyoda muvaffaqiyat sirlari (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_27556\",\"item_name\":\"Kel Nyuport: Diqqat: Chalg\\u2018ituvchi dunyoda muvaffaqiyat sirlari (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_27556\",\"item_name\":\"Kel Nyuport: Diqqat: Chalg\\u2018ituvchi dunyoda muvaffaqiyat sirlari (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_27556\",\"item_name\":\"Kel Nyuport: Diqqat: Chalg\\u2018ituvchi dunyoda muvaffaqiyat sirlari (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":64000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+                    <span class="pr_flash pr_discount">Chegirma</span>
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 28518);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,28518);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/asaxiy-books-doirasida-chop-etilgan-kitoblar-tuplami-15-chegirma" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//63f760cef2e97.jpg.webp" loading="lazy" alt="&quot;Asaxiy Books&quot; doirasida chop etilgan kitoblar to'plami" src="https://assets.asaxiy.uz/product/main_image/desktop//63f760cef2e97.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    "Asaxiy Books" doirasida chop etilgan kitoblar to'plami                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>8 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                    <span class="product__item-old--price">1 498 000 so'm</span>
+                                                        <span class="product__item-price">1 199 000 so'm</span>
+                                                            <div class="installment__price">129 900 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(28518); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/asaxiy-books-doirasida-chop-etilgan-kitoblar-tuplami-15-chegirma" onclick="show_one_click(28518);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28518\",\"item_name\":\"\\\"Asaxiy Books\\\" doirasida chop etilgan kitoblar to\'plami\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":299000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1498000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28518\",\"item_name\":\"\\\"Asaxiy Books\\\" doirasida chop etilgan kitoblar to\'plami\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":299000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1498000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28518\",\"item_name\":\"\\\"Asaxiy Books\\\" doirasida chop etilgan kitoblar to\'plami\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":299000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1498000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28518\",\"item_name\":\"\\\"Asaxiy Books\\\" doirasida chop etilgan kitoblar to\'plami\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":299000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1498000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_28518\",\"item_name\":\"\\\"Asaxiy Books\\\" doirasida chop etilgan kitoblar to\'plami\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":299000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":1498000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 25966);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,25966);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/zheims-klir-atom-odatlar-kattik-mukova" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//61c714f86e9b5.jpg.webp" loading="lazy" alt="Jeyms Klir: Atom odatlar (qattiq muqova)" src="https://assets.asaxiy.uz/product/main_image/desktop//61c714f86e9b5.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Jeyms Klir: Atom odatlar (qattiq muqova)                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>61 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">59 000 so'm</span>
+                                                            <div class="installment__price">6 400 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(25966); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/zheims-klir-atom-odatlar-kattik-mukova" onclick="show_one_click(25966);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_25966\",\"item_name\":\"Jeyms Klir: Atom odatlar (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_25966\",\"item_name\":\"Jeyms Klir: Atom odatlar (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_25966\",\"item_name\":\"Jeyms Klir: Atom odatlar (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_25966\",\"item_name\":\"Jeyms Klir: Atom odatlar (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_25966\",\"item_name\":\"Jeyms Klir: Atom odatlar (qattiq muqova)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":18000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":77000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                                    <div class="col-6 col-xl-3 col-md-4">
+        <div class="product__item d-flex flex-column justify-content-between ">
+
+                    <button type="button" class="product__item-cart border-0" onclick="addToCartAnim(this, 39051);addToCartGtag();">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.14286C0.5 0.78782 0.826217 0.5 1.22862 0.5H1.77096C2.69434 0.5 3.24721 1.04771 3.56336 1.55685C3.77408 1.89623 3.92653 2.28987 4.04577 2.64624C4.07806 2.64401 4.11078 2.64286 4.14387 2.64286H16.2849C17.0914 2.64286 17.6738 3.32379 17.4527 4.00811L15.677 9.50163C15.3498 10.5142 14.3012 11.2124 13.1079 11.2124H7.32937C6.12618 11.2124 5.07145 10.5028 4.75303 9.47909L4.01422 7.10386L2.7915 3.4621L2.78952 3.45572C2.63825 2.96901 2.49629 2.51433 2.28534 2.1746C2.08048 1.84469 1.91718 1.78571 1.77096 1.78571H1.22862C0.826217 1.78571 0.5 1.49789 0.5 1.14286Z" fill="white"></path>
+                    <path d="M6.81481 15.5C7.88792 15.5 8.7578 14.7325 8.7578 13.7857C8.7578 12.8389 7.88792 12.0714 6.81481 12.0714C5.74173 12.0714 4.87183 12.8389 4.87183 13.7857C4.87183 14.7325 5.74173 15.5 6.81481 15.5Z" fill="white"></path>
+                    <path d="M13.6151 15.5C14.6882 15.5 15.5581 14.7325 15.5581 13.7857C15.5581 12.8389 14.6882 12.0714 13.6151 12.0714C12.542 12.0714 11.6721 12.8389 11.6721 13.7857C11.6721 14.7325 12.542 15.5 13.6151 15.5Z" fill="white"></path>
+                </svg>
+            </button>
+
+        <button type="button" class="product__item-heart border-0 p-0 bg-transparent" onclick="addToFavourites(this,39051);addToWishlistGtag();">
+                            <img src="/custom-assets/images/icons/heart.svg">
+                    </button>
+
+        <a href="/uz/product/knigi/asaxiybooks-kitoblari/firuz-allaev-tadbirkor" onclick="selectItemGtag()">
+            <div class="product__item-img">
+                <img class="img-fluid lazyload" data-src="https://assets.asaxiy.uz/product/main_image/desktop//63ce6afd6881f.jpg.webp" loading="lazy" alt="Firuz Allayev: Tadbirkor (oldindan buyurtma)" src="https://assets.asaxiy.uz/product/main_image/desktop//63ce6afd6881f.jpg.webp">
+            </div>
+            <div class="product__item-info">
+                <p class="title__link">
+                <span class="product__item__info-title">
+                    Firuz Allayev: Tadbirkor (oldindan buyurtma)                </span>
+                </p>
+                <div class="product__item-info--rating">
+                    <div class="product__item-rating--stars">
+
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+    <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="product__item-info--comments">
+                        <svg width="12" height="12">
+                            <use xlink:href="#comment-icon" x="0" y="0"></use>
+                        </svg>
+                        <span>2 ta sharh</span>
+                    </div>
+                </div>
+
+                <div class="product__item-info--prices">
+                    <div class="produrct__item-prices--wrapper">
+                                                                                <span class="product__item-price">50 000 so'm</span>
+                                                            <div class="installment__price">5 500 so'm / 12 oy</div>
+                                                                        </div>
+                </div>
+            </div>
+        </a>
+                <div class="mt-3">
+            <div class="row s__custom-gutter">
+                                <div class="col-sm-5">
+                    <a onclick="show_installment(39051); installmentButtonGtag()" data-target="#installment" data-toggle="modal" href="#" class="btn default-btn btn-green-custom p-2 w-100" style="font-size: 14px">Rassrochka</a>
+                </div>
+                <div class="col-sm-7">
+                                            <a href="/uz/order/one-click/firuz-allaev-tadbirkor" onclick="show_one_click(39051);oneClickOrderGtag()" class="btn default-btn btn-primary-custom p-2 w-100" style="font-size: 13px">
+                            Bir klikda olish                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+            </div>
+
+    <script>
+        function selectItemGtag() {
+            let product_item = JSON.parse("{\"event\":\"select_item\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_39051\",\"item_name\":\"Firuz Allayev: Tadbirkor (oldindan buyurtma)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "select_item", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function installmentButtonGtag() {
+            let data = JSON.parse("{\"event\":\"installment\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_39051\",\"item_name\":\"Firuz Allayev: Tadbirkor (oldindan buyurtma)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "installment", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function oneClickOrderGtag() {
+            let data = JSON.parse("{\"event\":\"one_click_order\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_39051\",\"item_name\":\"Firuz Allayev: Tadbirkor (oldindan buyurtma)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(data);
+            gtag("event", "one_click_order", {
+                currency: "UZS",
+                value: data.ecommerce.items[0].price,
+                items: data.ecommerce.items
+            });
+        }
+
+        function addToCartGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_cart\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_39051\",\"item_name\":\"Firuz Allayev: Tadbirkor (oldindan buyurtma)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_cart", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+
+        function addToWishlistGtag() {
+            let product_item = JSON.parse("{\"event\":\"add_to_wishlist\",\"ecommerce\":{\"items\":[{\"item_id\":\"SKU_39051\",\"item_name\":\"Firuz Allayev: Tadbirkor (oldindan buyurtma)\",\"affiliation\":\"Asaxiy.uz sizning internet dokoningiz\",\"currency\":\"UZS\",\"index\":0,\"discount\":15000,\"item_brand\":\"not assigned\",\"item_category\":\"Asaxiy Books kitoblari\",\"price\":65000,\"quantity\":1}]}}");
+            window.dataLayer.push(product_item);
+            gtag("event", "add_to_wishlist", {
+                currency: "UZS",
+                value: product_item.ecommerce.items[0].price,
+                items: product_item.ecommerce.items
+            });
+        }
+    </script>
+
+
+                                                            </div>
