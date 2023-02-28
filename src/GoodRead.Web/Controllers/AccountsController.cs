@@ -32,7 +32,7 @@ public class AccountsController : Controller
                     HttpOnly = true,
                     SameSite = SameSiteMode.Strict
                 });
-                return RedirectToAction("Index", "Products", new { area = "" });
+                return RedirectToAction("Index", "Home", new { area = "" });
             }
             catch (ModelErrorException modelError)
             {
@@ -66,5 +66,12 @@ public class AccountsController : Controller
             }
         }
         else return Register();
+    }
+
+    [HttpGet("logout")]
+    public IActionResult LogOut()
+    {
+        HttpContext.Response.Cookies.Delete("X-Access-Token");
+        return RedirectToAction("Login", "Accounts", new { area = "" });
     }
 }
