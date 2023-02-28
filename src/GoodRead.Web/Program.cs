@@ -22,6 +22,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddMemoryCache();
 #endregion
 
 var app = builder.Build();

@@ -1,32 +1,37 @@
-﻿@{
+﻿@model GoodRead.Service.DTOs.Accounts.AccountRegisterDto;
+@{
     Layout = "_AccountLayout.cshtml";
 }
 <div class="card w-400px mt-20" style="margin-left:auto; margin-right:auto; margin-top:auto;margin-bottom:auto;">
     <div class="mt-5 mb-10 me-10 mx-10" > 
-        <form>
+        <form asp-controller="accounts" asp-action="register" method="post">
             <div class="mt-5">
                     <label class="required form-label" class="text-primary">Firstname</label>
-                    <input type="text" class="form-control" placeholder="Your name"/>
+                    <input type="text" asp-for="FirstName" class="form-control" placeholder="Your name"/>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>    
 
             <div class="opacity-state-75">
                 <div class="mt-5">
                     <label class="required form-label">Lastname</label>
-                    <input type="text" class="form-control" placeholder="Your surname"/>
+                    <input type="text" asp-for="LastName" class="form-control" placeholder="Your surname"/>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="opacity-state-75">
                 <div class="mt-5">
                     <label class="required form-label">Email</label>
-                    <input type="text" class="form-control" placeholder="Your email"/>
+                    <input type="email" asp-for="Email" class="form-control" placeholder="Your email"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="opacity-state-75">
                 <div class="mt-5">
                     <label class="required form-label">Password</label>
-                    <input type="text" class="form-control" placeholder="Password"/>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="Password"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
             </div>
 

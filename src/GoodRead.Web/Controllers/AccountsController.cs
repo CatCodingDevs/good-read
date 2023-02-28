@@ -48,8 +48,23 @@ public class AccountsController : Controller
     }
 
     [HttpGet("register")]
-    public IActionResult Register()
+    public ViewResult Register() => View("Register");
+
+    [HttpPost("register")]
+    public async Task<IActionResult> RegisterAsync(AccountRegisterDto accountRegisterDto)
     {
-        return View("Register");
+        if (ModelState.IsValid)
+        {
+            bool result = await _service.RegisterAsync(accountRegisterDto);
+            if (result)
+            {
+                return RedirectToAction("login", "accounts", new { area = "" });
+            }
+            else
+            {
+                return Register();
+            }
+        }
+        else return Register();
     }
 }
