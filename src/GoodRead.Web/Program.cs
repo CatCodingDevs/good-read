@@ -1,7 +1,28 @@
+using GoodRead.DataAccess.DbContexts;
+using GoodRead.DataAccess.Interfaces;
+using GoodRead.DataAccess.Repositories;
+using GoodRead.Service.Interfaces.Common;
+using GoodRead.Service.Interfaces.Users;
+using GoodRead.Service.Services.Common;
+using GoodRead.Service.Services.Users;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+string connectionString = builder.Configuration.GetConnectionString("GoodReadDb")!;
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+});
+#region
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IAuthManager, AuthManager>();
+#endregion
 
 var app = builder.Build();
 

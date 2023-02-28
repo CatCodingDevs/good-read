@@ -17,7 +17,7 @@ namespace GoodRead.WebApi.Configurations.Dependencies
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<IPaginatorService, PaginatorService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
-            builder.Services.AddScoped<IUserService, UserService>();
+            //builder.Services.AddScoped<IUserService, UserService>();
         }
     }
 }
