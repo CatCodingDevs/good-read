@@ -1,0 +1,27 @@
+﻿@model GoodRead.Service.DTOs.Accounts.VerifyEmailDto;
+@{
+    Layout = "_AccountLayout.cshtml";
+}
+<div class="card w-400px mt-20" style="margin-left:auto; margin-right:auto; margin-top:auto;margin-bottom:auto;">
+    <div class="mt-5 mb-10 me-10 mx-10">
+        <form asp-controller="accounts" asp-action="verifyemail" method="post">
+            <div class="mt-5">
+                <label class="required form-label text-primary">Confirmation code</label>
+                <input type="text" asp-for="Code" class="form-control" placeholder="Enter 6-digit code" pattern="\d{6}" title="Please enter a 6-digit code" maxlength="6" required />
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+            <div class="mt-5 mb-3">
+                <button type="submit" class="btn btn-primary" style="width:100%;">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const input = document.querySelector('input[name="Code"]');
+    input.addEventListener('input', () => {
+        if (input.value.length > 6) {
+            input.value = input.value.slice(0, 6);
+        }
+    });
+</script>

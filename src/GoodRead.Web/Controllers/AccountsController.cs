@@ -68,6 +68,28 @@ public class AccountsController : Controller
         else return Register();
     }
 
+    [HttpGet("verifyemail")]
+    public ViewResult VerifyEmail() => View("VerifyEmail");
+
+    [HttpPost("verifyemail")]
+    public async Task<IActionResult> VerifyEmailAsync(VerifyEmailDto verifyEmailDto)
+    {
+        if (ModelState.IsValid)
+        {
+            bool result = await _service.VerifyEmailAsync(verifyEmailDto);
+            if (result) 
+            {
+                //return RedirectToAction("Index", "Home", new { area = "" });
+                return RedirectToAction("login", "accounts", new { area = "" });
+            }
+            else
+            {
+                return VerifyEmail();
+            }
+        }
+        else return VerifyEmail();
+    }
+
     [HttpGet("logout")]
     public IActionResult LogOut()
     {
