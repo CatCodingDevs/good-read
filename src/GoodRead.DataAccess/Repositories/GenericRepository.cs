@@ -2,6 +2,7 @@
 using GoodRead.DataAccess.Interfaces;
 using GoodRead.Domain.Common;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace GoodRead.DataAccess.Repositories
 {
@@ -22,9 +23,9 @@ namespace GoodRead.DataAccess.Repositories
             return entity;
         }
 
-        public virtual async Task<T> DeleteAsync(long id)
+        public virtual async Task<T> DeleteAsync(Expression<Func<T, bool>> expression)
         {
-            var entity = await _dbSet.FindAsync(id);
+            var entity = await _dbSet.FirstOrDefaultAsync(expression);
             if (entity is not null)
             {
                 _dbSet.Remove(entity);
@@ -34,9 +35,9 @@ namespace GoodRead.DataAccess.Repositories
             else throw new NullReferenceException("Not found entity to remove");
         }
 
-        public virtual async Task<T> GetAsync(long id)
+        public virtual async Task<T> GetAsync(Expression<Func<T, bool>> expression)
         {
-            var entity = await _dbSet.FindAsync(id);
+            var entity = await _dbSet.FirstOrDefaultAsync(expression);
             return entity ?? throw new NullReferenceException("Not found entity to get");
         }
 
