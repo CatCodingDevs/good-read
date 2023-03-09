@@ -14,10 +14,9 @@ namespace GoodRead.Service.Services.Books
         private readonly IUnitOfWork _unitOfWork;
         private readonly IPaginatorService _paginator;
 
-        public BookService(IUnitOfWork unitOfWork, IPaginatorService paginator)
+        public BookService(IUnitOfWork unitOfWork)
         {
             this._unitOfWork = unitOfWork;
-            this._paginator = paginator;
         }
 
         public async Task<bool> CreateAsync(BookCreateDto bookCreateDto, long bookId)
@@ -44,9 +43,9 @@ namespace GoodRead.Service.Services.Books
             return true;
         }
 
-        public Task<IEnumerable<BookViewModel>> GetAllAsync(PaginationParams @params)
+        public async Task<IEnumerable<Book>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _unitOfWork.BookRepository.GetAllAsync();
         }
 
         public async Task<BookViewModel> GetAsync(long id)
@@ -56,6 +55,15 @@ namespace GoodRead.Service.Services.Books
             if (book is null) throw new StatusCodeException(HttpStatusCode.NotFound, "Book not found");
 
             return book;
+        }
+
+        public async Task<BookViewModel> SearchAsync(string search)
+        {
+            var title = await _unitOfWork.BookRepository.SearchAsync(search);
+
+            if (title is null) throw new StatusCodeException(HttpStatusCode.NotFound, "Book not found");
+
+            return (BookViewModel)title;
         }
 
         public async Task<bool> UpdateAsync(long bookId, BookCreateDto bookCreateDto)

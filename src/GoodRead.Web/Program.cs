@@ -1,8 +1,10 @@
 using GoodRead.DataAccess.DbContexts;
 using GoodRead.DataAccess.Interfaces;
 using GoodRead.DataAccess.Repositories;
+using GoodRead.Service.Interfaces.Books;
 using GoodRead.Service.Interfaces.Common;
 using GoodRead.Service.Interfaces.Users;
+using GoodRead.Service.Services.Books;
 using GoodRead.Service.Services.Common;
 using GoodRead.Service.Services.Users;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +25,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddMemoryCache();
 #endregion
 

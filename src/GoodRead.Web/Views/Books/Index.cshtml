@@ -1,7 +1,7 @@
 ﻿@model List<GoodRead.Domain.Entities.Books.Book>
 <div class="mb-10 w-100">
     <div class="d-flex justify-content-center">
-        <form data-kt-search-element="form" class="mx-30 align-content-center search w-300px position-relative" autocomplete="off">
+        <form data-kt-search-element="form" class="mx-30 align-content-center search w-300px position-relative" autocomplete="off" asp-action="search" asp-controller="books">
             <!--begin::Hidden input(Added to disable form autocomplete)-->
             <input type="hidden">
             <!--end::Hidden input-->
@@ -45,7 +45,7 @@
             <div class="col-lg-4 card mb-5 me-5 w-300px">
                 <div class="card mb-5">
                     <div class="mt-5">
-                        <img src="~/@book.ImagePath" class="w-100 card-rounded" />
+                        <img src="~/media/avatars/150-10.jpg" class="w-100 card-rounded" />
                     </div>
                     <div class="mt-5">
                         <h3>@book.Title</h3>
