@@ -68,9 +68,17 @@ namespace GoodRead.Web.Areas.Adminstrator.Controllers
             return RedirectToAction("index", "books", new { area = "adminstrator" });
         }
 
-        public async Task<IActionResult> DeleteAsync([FromRoute] long id)
+        [ActionName("delete")]
+        public async Task<IActionResult> DeleteRedirect([FromRoute] long id)
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteAsync([FromRoute]long id)
+        {
+            await unitOfWork.BookRepository.DeleteAsync(id);
+            return RedirectToAction("index", "books", new { area = "adminstrator" });
         }
     }
 }
