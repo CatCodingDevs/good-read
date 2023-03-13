@@ -10,6 +10,8 @@ namespace GoodRead.DataAccess.DbContexts
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
+            Database.Migrate();
+            Database.EnsureCreated();
         }
 
         public virtual DbSet<User> Users { get; set; }
