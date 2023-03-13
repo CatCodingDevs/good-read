@@ -17,7 +17,7 @@ builder.Services.AddControllersWithViews();
 string connectionString = builder.Configuration.GetConnectionString("GoodReadDb")!;
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseNpgsql(connectionString);
+    options.UseNpgsql(connectionString).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 #region
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -45,6 +45,11 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapAreaControllerRoute(
+   name: "adminstrator",
+   areaName: "Adminstrator",
+   pattern: "adminstrator/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

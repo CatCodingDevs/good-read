@@ -1,0 +1,72 @@
+﻿@model GoodRead.Service.DTOs.Books.BookCreateDto;
+
+
+<div class="card w-600px mt-20" style="margin-left:auto; margin-right:auto; margin-top:auto;margin-bottom:auto;">
+    <div class="mt-5 mb-10 me-10 mx-10">
+        <form asp-action="update" asp-controller="books" asp-area="adminstrator" method="post">
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Title</label>
+            <input type="text" asp-for="Title" class="form-control" value="@ViewBag.Title"/>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Description</label>
+            <input type="text" asp-for="Description" class="form-control form-text" value="@ViewBag.Description"/>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div class="mt-5 mb-3">
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Price</label>
+            <input type="number" asp-for="Price" class="form-control" value="@ViewBag.Price"/>
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Image</label>
+            <input type="file" asp-for="Image" class="form-control"/>
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Total pages</label>
+            <input type="number" asp-for="PageNumber" class="form-control" value="@ViewBag.PageNumber"/>
+            <span asp-validation-for="PageNumber" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Language</label>
+            <input type="text" asp-for="BookLanguage" class="form-control" value="@ViewBag.BookLanguage" />
+            <span asp-validation-for="BookLanguage" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">ISBN</label>
+            <input type="text" asp-for="ISBN" class="form-control" value="@ViewBag.ISBN" />
+            <span asp-validation-for="ISBN" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Published year</label>
+            <input type="date" asp-for="PublishedYear" class="form-control" value="@ViewBag.PublishedYear" />
+            <span asp-validation-for="PublishedYear" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Publisher id</label>
+            <input type="text" asp-for="PublisherId" class="form-control" value="@ViewBag.PublisherId" />
+            <span asp-validation-for="PublisherId" class="text-danger"></span>
+        </div>
+
+        <div class="mt-5 mb-3">
+            <label class="required form-label text-primary">Author id</label>
+            <input type="text" asp-for="AuthorId" class="form-control" value="@ViewBag.PublisherId" />
+            <span asp-validation-for="AuthorId" class="text-danger"></span>
+        </div>
+
+        <div>
+            <input type="submit" class="btn btn-primary w-100%" value="Save" />
+        </div>
+    </form>
+    </div>
+</div>
