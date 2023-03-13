@@ -7,9 +7,9 @@ namespace GoodRead.Service.Interfaces.Users
     {
         Task<string> LogInAsync(AccountLoginDto accountLogin);
 
-        Task<bool> RegisterAsync(AccountRegisterDto accountCreate);
+        Task<string> RegisterAsync(AccountRegisterDto accountCreate);
 
-        Task<bool> VerifyEmailAsync(VerifyEmailDto verifyEmail);
+        Task<bool> VerifyEmailAsync(AccountRegisterDto accountCreate, VerifyEmailDto code);
 
         Task SendCodeAsync(SendToEmailDto sendToEmail);
 

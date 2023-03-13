@@ -7,7 +7,7 @@
         <form asp-controller="accounts" asp-action="verifyemail" method="post">
             <div class="mt-5">
                 <label class="required form-label text-primary">Confirmation code</label>
-                <input type="text" asp-for="Code" class="form-control" placeholder="Enter 6-digit code" pattern="\d{6}" title="Please enter a 6-digit code" maxlength="6" required />
+                <input type="text" asp-for="Code" class="form-control" placeholder="Enter 5-digit code" pattern="\d{5}" title="Please enter a 5-digit code" maxlength="5" required />
                 <span asp-validation-for="Code" class="text-danger"></span>
             </div>
             <div class="mt-5 mb-3">
@@ -20,8 +20,8 @@
 <script>
     const input = document.querySelector('input[name="Code"]');
     input.addEventListener('input', () => {
-        if (input.value.length > 6) {
-            input.value = input.value.slice(0, 6);
+        if (input.value.length > 5) {
+            input.value = input.value.slice(0, 5);
         }
     });
 </script>

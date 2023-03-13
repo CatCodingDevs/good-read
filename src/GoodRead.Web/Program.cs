@@ -7,7 +7,13 @@ using GoodRead.Service.Interfaces.Users;
 using GoodRead.Service.Services.Books;
 using GoodRead.Service.Services.Common;
 using GoodRead.Service.Services.Users;
+using GoodRead.Web.Configurations;
+using GoodRead.Web.Middlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Net;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,17 +25,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(connectionString).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
-#region
-builder.Services.AddDbContext<AppDbContext>();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IAccountService, AccountService>();
-builder.Services.AddScoped<IAuthManager, AuthManager>();
-builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<IBookService, BookService>();
-builder.Services.AddMemoryCache();
-#endregion
-
+builder.Services.AddDataLayer(builder.Configuration).AddServices().ConfigureJWT(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -44,7 +40,16 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseStatusCodePages(async context =>
+{
+    if (context.HttpContext.Response.StatusCode == (int)HttpStatusCode.Unauthorized)
+    {
+        context.HttpContext.Response.Redirect("accounts/login");
+    }
+});
 
+app.UseMiddleware<TokenRedirectMiddleware>();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapAreaControllerRoute(
