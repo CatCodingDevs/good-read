@@ -1,4 +1,5 @@
 ﻿using GoodRead.Domain.Entities.Books;
+using Microsoft.AspNetCore.Http;
 
 namespace GoodRead.Service.DTOs.Books
 {
@@ -7,7 +8,7 @@ namespace GoodRead.Service.DTOs.Books
         public string Title { get; set; } = String.Empty;
         public string Description { get; set; } = String.Empty;
         public decimal Price { get; set; }
-        public string ImagePath { get; set; } = String.Empty;
+        public IFormFile Image { get; set; }
         public int PageNumber { get; set; }
         public string BookLanguage { get; set; } = String.Empty;
         public string ISBN { get; set; } = String.Empty;
@@ -26,7 +27,7 @@ namespace GoodRead.Service.DTOs.Books
                 Title = bookCreateDto.Title,
                 Description = bookCreateDto.Description,
                 Price = bookCreateDto.Price,
-                ImagePath = bookCreateDto.ImagePath,
+                ImagePath = "jorj-oruell.jpg",
                 PageNumber = bookCreateDto.PageNumber,
                 BookLanguage = bookCreateDto.BookLanguage,
                 ISBN = bookCreateDto.ISBN,

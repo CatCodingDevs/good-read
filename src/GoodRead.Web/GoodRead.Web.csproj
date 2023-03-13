@@ -21,4 +21,8 @@
     <ProjectReference Include="..\GoodRead.Service\GoodRead.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\media\images\" />
+  </ItemGroup>
+
 </Project>

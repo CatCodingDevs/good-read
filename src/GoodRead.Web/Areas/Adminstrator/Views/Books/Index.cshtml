@@ -1,0 +1,35 @@
+﻿@model List<GoodRead.Domain.Entities.Books.Book>;
+
+<div>
+    <h3>Kitoblar</h3>
+    <a asp-area="adminstrator" asp-controller="books" asp-action="addredirect" class="btn btn-success mt-2 mb-2">Qo'shish</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nomi</th>
+                <th scope="col">Author</th>
+                <th scope="col">Price</th>
+                <th scope="col">Amallar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Id</td>
+                        <td>@Html.ActionLink(book.Title, "get", "books", new { id = book.Id })</td>
+                        <td>@Html.ActionLink(book.AuthorId.ToString(), "get", "books", new { id = book.Id })</td>
+                        <td>@book.Price</td>
+                        <td style="width:200px">
+                            @Html.ActionLink("Update", "update", "books", new { id = book.Id })  |
+                            @Html.ActionLink("Delete", "delete", "books", new { id = book.Id })
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
