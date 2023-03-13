@@ -21,32 +21,23 @@ public class BooksController : Controller
     
     public async Task<IActionResult> Index()
     {
-        var books = await _bookService.GetAllAsync();
+        var books = await _bookService.GetAllAsync(new PaginationParams(1, 10));
         return View(books.ToList());
     }
+   
     [HttpGet("search")]
-    public async Task<IActionResult> SearchAsync(string titleName)
+    public async Task<ViewResult> SearchAsync(string search, int page = 1)
     {
-        var book = await _bookService.SearchAsync(titleName);
-        var dto = new BookViewModel()
+        PagedList<BookViewModel> result;
+        if (!String.IsNullOrEmpty(search))
         {
-            
-            Title = book.Title,
-            Description = book.Description,
-            Price = book.Price,
-            ImagePath = book.ImagePath,
-            PageNumber = book.PageNumber,
-            BookLanguage = book.BookLanguage,
-            ISBN = book.ISBN,
-            Publisher = book.Publisher,
-            PublishedYear = book.PublishedYear,
-        };
-
-        if (book is not null)
-        {
-            return NotFound();
-
+            ViewBag.search = search;
+            result = await _bookService.SearchByNameAsync(search, new PaginationParams(page, 10));
         }
-        return View("index", book);
+        else
+        {
+            result = await _bookService.GetAllAsync(new PaginationParams(page, 10));
+        }
+        return View("index",  result);
     }
 }

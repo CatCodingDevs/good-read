@@ -1,7 +1,7 @@
-﻿@model List<GoodRead.Domain.Entities.Books.Book>
+﻿@model List<GoodRead.Service.DTOs.Books.BookViewModel>
 <div class="mb-10 w-100">
     <div class="d-flex justify-content-center">
-        <form data-kt-search-element="form" class="mx-30 align-content-center search w-300px position-relative" autocomplete="off" asp-action="search" asp-controller="books">
+        <form data-kt-search-element="form" class="mx-30 align-content-center search w-300px position-relative" autocomplete="off" asp-action="search" asp-controller="books" method="get">
             <!--begin::Hidden input(Added to disable form autocomplete)-->
             <input type="hidden">
             <!--end::Hidden input-->

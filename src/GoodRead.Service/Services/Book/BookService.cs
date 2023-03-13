@@ -43,10 +43,10 @@ namespace GoodRead.Service.Services.Books
             return true;
         }
 
-        public async Task<IEnumerable<Book>> GetAllAsync()
-        {
-            return await _unitOfWork.BookRepository.GetAllAsync();
-        }
+        //public async Task<IEnumerable<Book>> GetAllAsync(PaginationParams @params)
+        //{
+        //    return await _unitOfWork.BookRepository.GetAllAsync();
+        //}
 
         public async Task<BookViewModel> GetAsync(long id)
         {
@@ -57,13 +57,40 @@ namespace GoodRead.Service.Services.Books
             return book;
         }
 
-        public async Task<BookViewModel> SearchAsync(string search)
+        //public async Task<BookViewModel> SearchAsync(string search)
+        //{
+        //    var title = await _unitOfWork.BookRepository.SearchAsync(search);
+
+        //    if (title is null) throw new StatusCodeException(HttpStatusCode.NotFound, "Book not found");
+
+        //    return (BookViewModel)title;
+        //}
+
+        public async Task<PagedList<BookViewModel>> SearchByNameAsync(string title, PaginationParams @params)
         {
-            var title = await _unitOfWork.BookRepository.SearchAsync(search);
 
-            if (title is null) throw new StatusCodeException(HttpStatusCode.NotFound, "Book not found");
+            var res = _unitOfWork.BookRepository.Where(x => x.Title.ToLower().Contains(title.ToLower())).Select(
+                book => new BookViewModel()
+                {
+                    //Id = product.Id,
+                    //ProductName = product.ProductName,
+                    //ProductDescription = product.ProductDescription,
+                    //Price = product.Price,
+                    //ImagePath = product.ImagePath
+                    Title = book.Title,
+                    Description = book.Description,
+                    Price = book.Price,
+                    ImagePath = book.ImagePath,
+                    PageNumber = book.PageNumber,
+                    BookLanguage = book.BookLanguage,
+                    ISBN = book.ISBN,
+                    Publisher = book.Publisher,
+                    PublishedYear = book.PublishedYear
+                });
 
-            return (BookViewModel)title;
+
+
+            return await PagedList<BookViewModel>.ToPagedListAsync(res, @params);
         }
 
         public async Task<bool> UpdateAsync(long bookId, BookCreateDto bookCreateDto)
@@ -77,6 +104,24 @@ namespace GoodRead.Service.Services.Books
             await _unitOfWork.BookRepository.UpdateAsync(bookId, updatedBook);
 
             return true;
+        }
+
+        public async Task<PagedList<BookViewModel>> GetAllAsync(PaginationParams @params)
+        {
+            var res = from book in await _unitOfWork.BookRepository.GetAllAsync()
+                        select new BookViewModel()
+                        {
+                            Title = book.Title,
+                            Description = book.Description,
+                            Price = book.Price,
+                            ImagePath = book.ImagePath,
+                            PageNumber = book.PageNumber,
+                            BookLanguage = book.BookLanguage,
+                            ISBN = book.ISBN,
+                            Publisher = book.Publisher,
+                            PublishedYear = book.PublishedYear
+                        };
+            return await PagedList<BookViewModel>.ToPagedListAsync(res, @params);
         }
     }
 }
