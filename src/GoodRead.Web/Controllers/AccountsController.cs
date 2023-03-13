@@ -2,6 +2,9 @@
 using GoodRead.Service.DTOs.Accounts;
 using GoodRead.Service.Interfaces.Users;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace GoodRead.Web.Controllers;
 [Route("accounts")]
@@ -26,6 +29,8 @@ public class AccountsController : Controller
         {
             try
             {
+                var res = HttpContext.Request.Cookies["X-Access-Token"];
+                Console.WriteLine(res);
                 string token = await _service.LogInAsync(dto);
                 HttpContext.Response.Cookies.Append("X-Access-Token", token, new CookieOptions()
                 {
@@ -44,7 +49,7 @@ public class AccountsController : Controller
                 return Login();
             }
         }
-        else return Login();
+        return Login();
     }
 
     [HttpGet("register")]
@@ -55,39 +60,67 @@ public class AccountsController : Controller
     {
         if (ModelState.IsValid)
         {
-            bool result = await _service.RegisterAsync(accountRegisterDto);
-            if (result)
+            try
             {
-                return RedirectToAction("login", "accounts", new { area = "" });
+                var result = await _service.RegisterAsync(accountRegisterDto);
+                HttpContext.Response.Cookies.Append("user", result, new CookieOptions()
+                {
+                    HttpOnly = true,
+                    SameSite = SameSiteMode.Strict
+                });
+                return RedirectToAction("sendcode", "accounts", new { area = "" });
             }
-            else
+            catch
             {
+                ModelState.AddModelError(nameof(accountRegisterDto.Email), "User already exists");
                 return Register();
             }
         }
-        else return Register();
+        return Register();
     }
 
     [HttpGet("verifyemail")]
-    public ViewResult VerifyEmail() => View("VerifyEmail");
+    public async Task<IActionResult> VerifyEmail()
+    {
+        try
+        {
+            var email = JsonConvert.DeserializeObject<AccountRegisterDto>(HttpContext.Request.Cookies["user"]).Email;
+            return View("VerifyEmail");
+        }
+        catch
+        {
+            return RedirectToAction("register", "accounts", new { area = "" });
+        }
+    }
+
+    [HttpGet("sendcode")]
+    public async Task<IActionResult> SendCodeAsync()
+    {
+        await _service.SendCodeAsync(new SendToEmailDto() { Email = JsonConvert.DeserializeObject<AccountRegisterDto>(HttpContext.Request.Cookies["user"]).Email });
+        return RedirectToAction("verifyemail", "accounts", new { area = "" });
+    }
+
 
     [HttpPost("verifyemail")]
     public async Task<IActionResult> VerifyEmailAsync(VerifyEmailDto verifyEmailDto)
     {
-        if (ModelState.IsValid)
+        try
         {
-            bool result = await _service.VerifyEmailAsync(verifyEmailDto);
-            if (result) 
+            var user = JsonConvert.DeserializeObject<AccountRegisterDto>(HttpContext.Request.Cookies["user"]);
+
+            bool result = await _service.VerifyEmailAsync(user, verifyEmailDto);
+            if (result)
             {
-                //return RedirectToAction("Index", "Home", new { area = "" });
+                HttpContext.Response.Cookies.Delete("user");
                 return RedirectToAction("login", "accounts", new { area = "" });
             }
-            else
-            {
-                return VerifyEmail();
-            }
+            ModelState.AddModelError(nameof(verifyEmailDto.Code), "Code is wrong");
+            return await VerifyEmail();
         }
-        else return VerifyEmail();
+        catch
+        {
+            return await VerifyEmail();
+        }
     }
 
     [HttpGet("logout")]

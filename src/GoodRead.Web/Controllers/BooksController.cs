@@ -4,11 +4,13 @@ using GoodRead.Service.DTOs.Books;
 using GoodRead.Service.DTOs.Common;
 using GoodRead.Service.DTOs.Orders;
 using GoodRead.Service.Interfaces.Books;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GoodRead.Web.Controllers;
 
 [Route("books")]
+[Authorize]
 public class BooksController : Controller
 {
     private readonly IBookService _bookService;
@@ -16,6 +18,7 @@ public class BooksController : Controller
     {
         this._bookService = service;
     }
+    
     public async Task<IActionResult> Index()
     {
         var books = await _bookService.GetAllAsync();

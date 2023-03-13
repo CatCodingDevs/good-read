@@ -31,7 +31,7 @@ namespace GoodRead.Service.DTOs.Books
                 PageNumber = bookCreateDto.PageNumber,
                 BookLanguage = bookCreateDto.BookLanguage,
                 ISBN = bookCreateDto.ISBN,
-                PublishedYear = bookCreateDto.PublishedYear,
+                PublishedYear = bookCreateDto.PublishedYear.ToUniversalTime(),
                 PublisherId = bookCreateDto.PublisherId,
                 AuthorId = bookCreateDto.AuthorId,
                 Genre = bookCreateDto.Genre,
