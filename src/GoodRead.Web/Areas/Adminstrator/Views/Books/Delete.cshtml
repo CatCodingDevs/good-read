@@ -1,0 +1,13 @@
+﻿<div class="card w-450px h-450px" style="margin-left:auto; margin-right:auto; margin-top:1%">
+    <form class="card w-450px h-450px" asp-action="delete" asp-controller="books" asp-area="adminstrator" method="post">
+        <div class="form">
+            <h3 class="form mt-10 " style="text-align:center;">
+                Are you sure to delete it ?
+            </h3>
+        </div>
+        <div style="margin-top:90px">
+            <a class="btn btn-primary m-10" asp-action="index" asp-controller="books" asp-area="adminstrator">Cancel</a>
+            <input class="btn btn-primary w-100px" style="margin-left:155px" type="submit" value="Yes"/>
+        </div>
+    </form>
+</div>
