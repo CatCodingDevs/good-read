@@ -44,7 +44,7 @@ app.UseStatusCodePages(async context =>
 {
     if (context.HttpContext.Response.StatusCode == (int)HttpStatusCode.Unauthorized)
     {
-        context.HttpContext.Response.Redirect("accounts/login");
+        context.HttpContext.Response.Redirect("https://localhost:7059/accounts/login");
     }
 });
 
@@ -54,7 +54,7 @@ app.UseAuthorization();
 
 app.MapAreaControllerRoute(
    name: "adminstrator",
-   areaName: "Adminstrator",
+   areaName: "Adminstrator", 
    pattern: "adminstrator/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
